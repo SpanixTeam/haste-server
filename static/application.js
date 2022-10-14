@@ -81,7 +81,7 @@ haste_document.prototype.save = function(data, callback) {
         callback($.parseJSON(res.responseText));
       }
       catch (e) {
-        callback({message: 'Something went wrong!'});
+        callback({message: '¡Algo salió mal!'});
       }
     }
   });
