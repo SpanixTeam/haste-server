@@ -1,61 +1,60 @@
 # Haste
 
-Sharing code is a good thing, and it should be _really_ easy to do it.
-A lot of times, I want to show you something I'm seeing - and that's where we
-use pastebins.
+Compartir código es algo bueno, y debería ser _realmente_ fácil hacerlo.
+Muchas veces, quiero mostrarte algo que estoy viendo - y ahí es donde usamos los pastebins.
 
-Haste is the prettiest, easiest to use pastebin ever made.
+Haste es el pastebin más bonito y fácil de usar que se ha hecho.
 
-## Basic Usage
+## Uso básico
 
-Type what you want me to see, click "Save", and then copy the URL.  Send that
-URL to someone and they'll see what you see.
+Escribe lo que quieres que vea, haz clic en "Guardar" y luego copia la URL. Envía esa
+URL a alguien y ellos verán lo que tú ves.
 
-To make a new entry, click "New" (or type 'control + n')
+Para hacer una nueva entrada, haz clic en "Nuevo" (o escribe 'control + n')
 
-## From the Console
+## Desde la consola
 
-Most of the time I want to show you some text, it's coming from my current
-console session.  We should make it really easy to take code from the console
-and send it to people.
+La mayoría de las veces que quiero mostrarte algún texto, viene de mi actual
+sesión de la consola.  Deberíamos hacer muy fácil tomar el código de la consola
+y enviarlo a la gente.
 
-`cat something | haste` # https://hastebin.com/1238193
+`cat algo | haste` # https://paste.spanix.xyz/1238193
 
-You can even take this a step further, and cut out the last step of copying the
-URL with:
+Incluso puedes llevar esto un paso más allá, y eliminar el último paso de copiar la
+URL con:
 
-* osx: `cat something | haste | pbcopy`
-* linux: `cat something | haste | xsel -b`
+* osx: `cat algo | haste | pbcopy`
+* linux: `cat algo | haste | xsel`
 * windows: check out [WinHaste](https://github.com/ajryan/WinHaste)
 
-After running that, the STDOUT output of `cat something` will show up at a URL
-which has been conveniently copied to your clipboard.
+Después de ejecutar esto, la salida STDOUT de `cat algo` aparecerá en una URL
+que ha sido convenientemente copiada en tu portapapeles.
 
-That's all there is to that, and you can install it with `gem install haste`
-right now.
-  * osx: you will need to have an up to date version of Xcode
-  * linux: you will need to have rubygems and ruby-devel installed
+Eso es todo, y puedes instalarlo con `gem install haste`
+ahora mismo.
+  * osx: necesitarás tener una versión actualizada de Xcode
+  * linux: necesitarás tener instalados rubygems y ruby-devel
 
-## Duration
+## Duración
 
-Pastes will stay for 30 days from their last view.  They may be removed earlier
-and without notice.
+Los pastes permanecerán durante 30 días desde su última vista.
+Pueden ser eliminados antes y sin previo aviso.
 
-## Privacy
+## Privacidad
 
-While the contents of hastebin.com are not directly crawled by any search robot
-that obeys "robots.txt", there should be no great expectation of privacy.  Post
-things at your own risk. Not responsible for any loss of data or removed
+Aunque los contenidos de paste.spanix.xyz no son rastreados directamente por ningún robot de búsqueda
+que obedezca a "robots.txt", no debería haber una gran expectativa de privacidad.  Publique en
+cosas bajo su propio riesgo. No nos hacemos responsables de cualquier pérdida de datos o de la eliminación de
 pastes.
 
-## Open Source
+## Código abierto
 
-Haste can easily be installed behind your network, and it's all open source!
+Haste puede ser fácilmente instalado detrás de tu red, ¡y es todo código abierto!
 
 * [haste-client](https://github.com/seejohnrun/haste-client)
 * [haste-server](https://github.com/seejohnrun/haste-server)
 
-## Author
+## Autor
 
-Code by John Crepezzi <john.crepezzi@gmail.com>
-Key Design by Brian Dawson <bridawson@gmail.com>
+Código por John Crepezzi <john.crepezzi@gmail.com>
+Diseño de llaves por Brian Dawson <bridawson@gmail.com>

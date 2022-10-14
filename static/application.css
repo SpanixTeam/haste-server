@@ -1,5 +1,5 @@
 body {
-	background: #002B36;
+	background: #0B141C;
 	padding: 20px 50px;
 	margin: 0px;
 }
@@ -17,8 +17,6 @@ textarea {
 	outline: none;
 	resize: none;
 	font-size: 13px;
-	margin-top: 0;
-	margin-bottom: 0;
 }
 
 /* the line numbers */
@@ -33,7 +31,6 @@ textarea {
 	font-size: 13px;
 	font-family: monospace;
 	text-align: right;
-	user-select: none;
 }
 
 /* code box when locked */
@@ -65,11 +62,11 @@ textarea {
 #box1 {
 	padding: 5px;
 	text-align: center;
-	background: #00222b;
+	background: #000000;
 }
 
 #box2 {
-	background: #08323c;
+	background: #000011;
 	font-size: 0px;
 	padding: 0px 5px;
 }
@@ -120,7 +117,6 @@ textarea {
 	font-size: 12px;
 	line-height: 14px;
 	padding: 10px 15px;
-	user-select: none;
 }
 
 #box3 .label, #messages li {
@@ -172,4 +168,3 @@ textarea {
 #messages li.error {
 	background:rgba(102,8,0,0.8);
 }
-

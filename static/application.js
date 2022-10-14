@@ -106,7 +106,7 @@ var haste = function(appName, options) {
 
 // Set the page title - include the appName
 haste.prototype.setTitle = function(ext) {
-  var title = ext ? this.appName + ' - ' + ext : this.appName;
+  var title = ext ? this.appName + ' | ' + ext : this.appName;
   document.title = title;
 };
 
@@ -248,7 +248,7 @@ haste.prototype.lockDocument = function() {
       if (ret.language) {
         file += '.' + _this.lookupExtensionByType(ret.language);
       }
-      window.history.pushState(null, _this.appName + '-' + ret.key, file);
+      window.history.pushState(null, _this.appName + '|' + ret.key, file);
       _this.fullKey();
       _this.$textarea.val('').hide();
       _this.$box.show().focus();
@@ -262,8 +262,8 @@ haste.prototype.configureButtons = function() {
   this.buttons = [
     {
       $where: $('#box2 .save'),
-      label: 'Save',
-      shortcutDescription: 'control + s',
+      label: 'Guardar',
+      shortcutDescription: 'Control + S',
       shortcut: function(evt) {
         return evt.ctrlKey && (evt.keyCode === 83);
       },
@@ -275,33 +275,33 @@ haste.prototype.configureButtons = function() {
     },
     {
       $where: $('#box2 .new'),
-      label: 'New',
+      label: 'Nuevo',
       shortcut: function(evt) {
         return evt.ctrlKey && evt.keyCode === 78;
       },
-      shortcutDescription: 'control + n',
+      shortcutDescription: 'Control + N',
       action: function() {
         _this.newDocument(!_this.doc.key);
       }
     },
     {
       $where: $('#box2 .duplicate'),
-      label: 'Duplicate & Edit',
+      label: 'Duplicar & Editar',
       shortcut: function(evt) {
         return _this.doc.locked && evt.ctrlKey && evt.keyCode === 68;
       },
-      shortcutDescription: 'control + d',
+      shortcutDescription: 'Control + D',
       action: function() {
         _this.duplicateDocument();
       }
     },
     {
       $where: $('#box2 .raw'),
-      label: 'Just Text',
+      label: 'Solo Texto',
       shortcut: function(evt) {
         return evt.ctrlKey && evt.shiftKey && evt.keyCode === 82;
       },
-      shortcutDescription: 'control + shift + r',
+      shortcutDescription: 'Control + Shift + R',
       action: function() {
         window.location.href = '/raw/' + _this.doc.key;
       }
@@ -312,7 +312,7 @@ haste.prototype.configureButtons = function() {
       shortcut: function(evt) {
         return _this.options.twitter && _this.doc.locked && evt.shiftKey && evt.ctrlKey && evt.keyCode == 84;
       },
-      shortcutDescription: 'control + shift + t',
+      shortcutDescription: 'Control + Shift + T',
       action: function() {
         window.open('https://twitter.com/share?url=' + encodeURI(window.location.href));
       }
